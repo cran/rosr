@@ -1,0 +1,33 @@
+--- 
+title: Template for using R 'bookdown' package in a 'rosr' project
+author: "Peng Zhao"
+date: "2019/01/14 (updated: `r Sys.Date()`)"
+output: 
+  bookdown::pdf_book:
+    includes:
+      in_header: tex/template_yihui_demo.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+documentclass: book
+bibliography: [bib/rosr.bib]
+biblio-style: apalike
+link-citations: yes
+colorlinks: no  
+# toc: no
+lot: no
+lof: no
+site: bookdown::bookdown_site
+---
+
+```{r md-hint, include=FALSE}
+# Markdown Syntax
+
+# - *italic*, **bold**, `code`, ~subscript~, ^superscript^, > quote, ^[footnote]
+# - $inline equation$, $$display equation$$
+# - \begin{equation} (\#eq:eq-label)\end(equation), \@ref(eq:eq-label)
+# - [@bib-entry1; @bib-entry2]
+# - [](hyperlink)
+# - ![](image link), knitr::include_graphics(), \@ref(fig:fig1)
+# - knitr::kable(), \@ref(tab:tab1)
+```
