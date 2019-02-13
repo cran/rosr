@@ -67,10 +67,10 @@ read_eq <- function(eqs, skip = 6){
 #'
 #' @examples
 #' # Copy the MathML codes of an equation into your clipboard.
-#' eq_word(NA)
+#' eqw('test')
 #' # Now paste to MS Word.
-eq_word <- function(connection = 'clipboard'){
-  if(is.na(connection)) return(message('connection must be "clipboard" or a file path.'))
+eqw <- function(connection = 'clipboard'){
+  if(is.na(connection) | (connection != 'clipboard' & !file.exists(connection))) return(message('connection must be "clipboard" or a valid file path.'))
   mathml <- readLines(connection, encoding = 'UTF-8', warn = FALSE)
   writeLines(c('<?xml version="1.0"?>',
                mathml,

@@ -1,10 +1,10 @@
-ae1a9ed7322d5fc06d88b991e53aa811 *DESCRIPTION
+e54a0cb1f8b3041a2c1f1df3f59f358c *DESCRIPTION
 29a9012941a6bcb26bf0fb4382c5dd75 *LICENSE
-52188c29fb0ce41876963a146d75409d *NAMESPACE
+df8efda55d69771526d72a733568b343 *NAMESPACE
 671924e97e3713437e14d1980fc17fd1 *R/begin.R
-ab390325f1999403bdd91a20aff0d80c *R/eq.R
+e89cefa4cd0ee62aca587e8a300d302d *R/eq.R
 3a5132969a9efc31f6d893a6bd3f2925 *R/internal.R
-e6e301132ebcfa7565ba7e5431b481f0 *R/main.R
+5225141577d1fec036f6b874cf6fd695 *R/main.R
 e3548960250b40993812880e1fafd0d3 *R/shiny.R
 b99efe1d64d1dad3ca474dac30c2340f *inst/rmarkdown/templates/beamer/skeleton/skeleton.Rmd
 a32292b9bcc137a2c0222a6c78d6b447 *inst/rmarkdown/templates/beamer/template.yaml
@@ -29,7 +29,7 @@ d5aa6dd33de81ffe9b0a4a1dcd3d935a *man/create_bib.Rd
 30a58e35b5dfcd33c60f0f04183d07e9 *man/create_data.Rd
 b937dcf5919bb2e4fa05d2f89ee0a308 *man/create_dir.Rd
 b6eba8c36b6d10a83dc9b1ad2a8abde1 *man/create_eq.Rd
-f74e10f3686203460a6b377b763b56ab *man/create_mindmap.Rd
+c04614ffe53c7e1450060d02d4bacb11 *man/create_mindmap.Rd
 7842d6f9061eb932c04235706158b880 *man/create_r.Rd
 5dc0f7c1e4dc5d61e0ffa404bdb8dd5a *man/create_rmd.Rd
 98c15ebfbdb2b3d53cce69ca4f889c8d *man/create_rosr.Rd
@@ -38,7 +38,7 @@ fbd1d1ba08cf11967ee367e9b83641c1 *man/create_rproj.Rd
 8d61e800194f2182dd191c649d436ed3 *man/create_ui.Rd
 56579d9c2b1e79d780d94d52866ba9f5 *man/create_website.Rd
 34aa73b747bf3a7cf4e6b01486cdba42 *man/eq.Rd
-aff98b638d65ccb302d3715288fa28f5 *man/eq_word.Rd
+af87e289bb3e67d18aafd47729efb095 *man/eqw.Rd
 b6b89bd81bccc8376e8a30cecfd06040 *man/get_yaml.Rd
 5cf0bbbab07d1187a598ca59e40e2a51 *man/install_packages.Rd
 268e5398ddf7796f88b93dbeb8963cb1 *man/read_eq.Rd
