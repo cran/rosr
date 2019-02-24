@@ -1,6 +1,6 @@
 Package: rosr
-Version: 0.0.4
-Date: 2019-02-13
+Version: 0.0.5
+Date: 2019-02-22
 Title: Create Reproducible Research Projects
 Authors@R: c(
     person("Peng", "Zhao", role = c("aut", "cre"), email = "pzhao@pzhao.net")
@@ -18,7 +18,7 @@ SystemRequirements: Pandoc (>= 2.2.3)
 RoxygenNote: 6.1.1
 NeedsCompilation: no
 LazyData: true
-Packaged: 2019-02-13 10:52:23 UTC; Peng.Zhao
+Packaged: 2019-02-22 19:27:08 UTC; PengZhao
 Author: Peng Zhao [aut, cre]
 Repository: CRAN
-Date/Publication: 2019-02-13 12:10:02 UTC
+Date/Publication: 2019-02-24 16:40:02 UTC
