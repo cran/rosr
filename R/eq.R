@@ -5,14 +5,16 @@
 #' @param label Character. The label of the equation.
 #' @param style character. The style of the equation.
 #' @param skip integer. the number of lines of the data file to skip before beginning to read data.
+#' @param if_copy logical. Whether copy the equation into the clipboard.
 #'
 #' @return A string of the equation.
+#' @importFrom clipr clipr_available write_clip
 #' @export
 #' @examples
 #' eq()
 eq <- function(eqs = NULL, label = NULL, number = NULL,
                style = c('numbered', 'display', 'inline', 'none'),
-               skip = 6) {
+               skip = 6, if_copy = TRUE) {
   if(is.null(eqs)) return(message('A source file of the equations must be give.'))
   if(is.null(number) & is.null(label)) return(message('A number or a label of the equation must be given.'))
   style <- match.arg(style)
@@ -33,6 +35,14 @@ eq <- function(eqs = NULL, label = NULL, number = NULL,
   if(!is.data.frame(eqs)) eqs <- read_eq(eqs, skip)
   eq_txt <- ifelse(is.null(number), eqs$eq[eqs$label == label], eqs$eq[eqs$n == number])
   cat(before, eq_txt, after, sep = '')
+  if(if_copy){
+    if (clipr::clipr_available()) {
+      out_lines <- paste('$$', eq_txt, '$$')
+      clipr::write_clip(out_lines)
+    } else {
+      message('Clipboard is unavailable.')
+    }
+  }
 }
 
 #' Read equations from a file
@@ -47,14 +57,18 @@ eq <- function(eqs = NULL, label = NULL, number = NULL,
 #' eq_file <- file.path(system.file(package = 'rosr'), 'skeleton/equation/rosr-eq.Rmd')
 #' eqs <- read_eq(eq_file)
 read_eq <- function(eqs, skip = 6){
-  eqs <- read.table(eqs, skip = skip, sep = '|', header = TRUE,
-                    stringsAsFactors = FALSE, encoding = 'UTF-8')
-  eqs <- eqs[-1, c("number", "label", "description", "eq" )]
-  eqs$eq <- gsub('^[[:space:]]*[\\$]*', '', eqs$eq)
-  eqs$eq <- gsub('[\\$]*[[:space:]]*$', '', eqs$eq)
-  eqs$number <- rm_space(eqs$number)
-  eqs$label <- rm_space(eqs$label)
-  return(eqs)
+  eqs <- readLines(eqs, encoding = 'UTF-8')
+  eqs <- eqs[-c(1:(skip + 2))]
+  eqs <- gsub('[[:space:]]*\\|[[:space:]]*$', '', eqs)
+  eqs_split <- strsplit(eqs, '\\|', )
+  eqs_df <- data.frame(number = rm_space(sapply(eqs_split, function(x) x[2])), stringsAsFactors = FALSE)
+  eqs_df$label <- rm_space(sapply(eqs_split, function(x) x[3]))
+  eqs_df$description <- rm_space(sapply(eqs_split, function(x) x[4]))
+  eqs_df$eq <- sapply(eqs, function(x) gsub('^.*\\${2}(.+)\\${2}$', '\\1', x))
+  # eqs_df$eq <- sapply(eqs, function(x) gsub('.*\\$+([^\\$]+)\\$+.*$', '\\1', x))
+  # myenv <- list2env(setNames(as.list(eqs_df), zh))
+  return(eqs_df)
+  # return(myenv)
 }
 
 #' Convert a MathML equation for Microsoft Word

@@ -1,11 +1,11 @@
-a28db47a2bf491317d5970e8ce67a025 *DESCRIPTION
+ef7168ba4160ed8e6c993a0bd91133da *DESCRIPTION
 29a9012941a6bcb26bf0fb4382c5dd75 *LICENSE
-df8efda55d69771526d72a733568b343 *NAMESPACE
+c19c5f648a1da109cf8c895a1842ecdd *NAMESPACE
 90da98c8d2d8efe4461e03df53a1789c *R/begin.R
-e89cefa4cd0ee62aca587e8a300d302d *R/eq.R
+4ac22c6042cd0bd974f084176aa8a1c6 *R/eq.R
 3a5132969a9efc31f6d893a6bd3f2925 *R/internal.R
-fbc8510a2a113c651f606fdad53d1fcf *R/main.R
-e3548960250b40993812880e1fafd0d3 *R/shiny.R
+771a68bcc3c417b31fe9022531a12d4f *R/main.R
+74b4d1c5f2e268bb0b14d5737ef293b8 *R/shiny.R
 b99efe1d64d1dad3ca474dac30c2340f *inst/rmarkdown/templates/beamer/skeleton/skeleton.Rmd
 a32292b9bcc137a2c0222a6c78d6b447 *inst/rmarkdown/templates/beamer/template.yaml
 3ad60dd0d82d7577d6351aed3be14341 *inst/rmarkdown/templates/powerpoint/skeleton/skeleton.Rmd
@@ -16,7 +16,7 @@ bd8ce231fa4b2c2f2cba97f19c1767e7 *inst/skeleton/bib/rosr.bib
 6d2ef41e33370df52439072053e17bb3 *inst/skeleton/book/bookdownplus/demo/body.Rmd
 aca397eefa8ed494e9e380ed5698ad94 *inst/skeleton/book/bookdownplus/demo/index.Rmd
 3185df8dbaef835d190e9dc2d61ad85f *inst/skeleton/equation/rosr-eq.Rmd
-26e37a50b6ac8c7722410175c7c1e7d7 *inst/skeleton/manuscript/rticles/copernicus_article/copernicus_article.Rmd
+cb2d116eaee63a8b736aeae5cf406a96 *inst/skeleton/manuscript/rticles/copernicus_article/copernicus_article.Rmd
 afe3b1edb47605dbfe64f2c6caf94c35 *inst/skeleton/manuscript/rticles/copernicus_article/preamble.tex
 e815e303d68572df20fe742937a6aecb *inst/skeleton/poster/drposter/drposter/custom.css
 d4b483fb621c7a47af4831487f183f42 *inst/skeleton/poster/drposter/drposter/drposter.Rmd
@@ -25,7 +25,7 @@ e49c7053f3493e44e2848b7339537a91 *inst/skeleton/slide/xaringan/xaringan/xaringan
 639f51a2f449d2a289f4e821cead832a *inst/skeleton/website/yihui_hugo-lithium/content/post/2019-01-15-rosr.Rmd
 bca47d57076b497e06e5b7ad10110977 *man/copy_rmd.Rd
 d5aa6dd33de81ffe9b0a4a1dcd3d935a *man/create_bib.Rd
-22caa55254d9197f30a9a9582de2338a *man/create_book.Rd
+9021fe88e31914e012b3e54ac7eff82f *man/create_book.Rd
 30a58e35b5dfcd33c60f0f04183d07e9 *man/create_data.Rd
 b937dcf5919bb2e4fa05d2f89ee0a308 *man/create_dir.Rd
 b6eba8c36b6d10a83dc9b1ad2a8abde1 *man/create_eq.Rd
@@ -37,7 +37,7 @@ d24b1f93c7bfecbfe6e6d9cbbf22bdb0 *man/create_rpkg.Rd
 fbd1d1ba08cf11967ee367e9b83641c1 *man/create_rproj.Rd
 8d61e800194f2182dd191c649d436ed3 *man/create_ui.Rd
 587c84a23e0ea7c15a9a95d73b6beeed *man/create_website.Rd
-34aa73b747bf3a7cf4e6b01486cdba42 *man/eq.Rd
+4fb90596ddb4883aa7ec5f25de3c835d *man/eq.Rd
 af87e289bb3e67d18aafd47729efb095 *man/eqw.Rd
 b6b89bd81bccc8376e8a30cecfd06040 *man/get_yaml.Rd
 1d4ce1db6299cced129e91e88ab98984 *man/install_packages.Rd

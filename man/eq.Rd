@@ -5,7 +5,7 @@
 \title{Insert an equation.}
 \usage{
 eq(eqs = NULL, label = NULL, number = NULL, style = c("numbered", "display", "inline", 
-    "none"), skip = 6)
+    "none"), skip = 6, if_copy = TRUE)
 }
 \arguments{
 \item{eqs}{Character. The path to the equation text file, or a data frame of the equations.}
@@ -17,6 +17,8 @@ eq(eqs = NULL, label = NULL, number = NULL, style = c("numbered", "display", "in
 \item{style}{character. The style of the equation.}
 
 \item{skip}{integer. the number of lines of the data file to skip before beginning to read data.}
+
+\item{if_copy}{logical. Whether copy the equation into the clipboard.}
 }
 \value{
 A string of the equation.
