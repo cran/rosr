@@ -93,3 +93,15 @@ eqw <- function(connection = 'clipboard'){
              useBytes = TRUE)
   message('Now you can paste the equation in MS Word.')
 }
+
+
+#' Insert an image in the 'image/' directory.
+#'
+#' @importFrom knitr include_graphics
+#' @param filename The file name of the image.
+#'
+#' @return Insert an image.
+#' @export
+fig <- function(filename) {
+  knitr::include_graphics(file.path(getwd(), 'image', filename))
+}
