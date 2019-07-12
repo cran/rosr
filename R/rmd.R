@@ -18,7 +18,7 @@ rmd_template <- function(...,
                            "-auto_identifiers"    # disables \hypertarget commands
                          )) {
   template <- system.file("rmarkdown", "templates", template_name, "resources", "template.tex", package = "rosr")
-  fmt <- rmarkdown::pdf_document(..., template = template)
+  fmt <- rmarkdown::pdf_document(..., template = template, keep_tex = keep_tex)
   fmt$inherits <- "pdf_document"
   fmt
 }
@@ -53,10 +53,14 @@ manuscript_svm <- function(...){
   rmd_template(template_name = "manuscript_svm")
 }
 
-
 #' @rdname rmd_template
 #' @export
 letter_moderncv <- function(...){
   rmd_template(template_name = "letter_moderncv")
 }
 
+#' @rdname rmd_template
+#' @export
+beamer_zh <- function(...){
+  rmd_template(template_name = "beamer_zh")
+}
