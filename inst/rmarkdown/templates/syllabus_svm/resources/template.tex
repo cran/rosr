@@ -1,4 +1,13 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
+\documentclass[$if(indentfirst)$indent,$endif$$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\usepackage{amsmath} % equations
+$if(revise-package)$
+\usepackage{$revise-package$}
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 \usepackage[$geometry$]{geometry}
 \newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
 $if(fontfamily)$
@@ -12,7 +21,7 @@ $endif$
 \newcommand{\blankline}{\quad\pagebreak[2]}
 
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs}
 
 \usepackage{parskip}
@@ -27,7 +36,7 @@ $endif$
 
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{6pt plus 2pt minus 1pt}
-%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -36,7 +45,7 @@ $endif$
 \pagestyle{fancy}
 \usepackage{lastpage}
 \renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0.0pt} 
+\renewcommand{\footrulewidth}{0.0pt}
 \lhead{}
 \chead{}
 \rhead{\footnotesize $title$ -- $date$}
@@ -78,7 +87,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -150,13 +159,13 @@ $endif$
 \date{$date$}
 
 
-\begin{document}  
+\begin{document}
 
 	$if(title)$
 	\maketitle
 	$endif$
-	
-	
+
+
 		\thispagestyle{firststyle}
 
 %	\thispagestyle{empty}
@@ -164,16 +173,31 @@ $endif$
 
 	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
+$if(header_zh)$
+	$if(presenter)$主讲人: $presenter$ &$endif$
+	$if(capacity)$参与人数: $capacity$$endif$ \\
+	$if(email)$邮箱: \texttt{$email$} &$endif$
+	$if(web)$网站: \href{http://$web$}{\tt $web$}$endif$ \\
+	$if(classhours)$课程时间: $classhours$ &$endif$
+	$if(location)$课程地点: $location$$endif$ \\
+	$if(officehours)$答疑时间: $officehours$  &$endif$
+	$if(office)$办公室: $office$$endif$ \\
+$else$
+	$if(presenter)$Presenter: $presenter$ &$endif$
+	$if(capacity)$Capacity: $capacity$$endif$ \\
+	$if(email)$E-mail: \texttt{$email$} &$endif$
+	$if(web)$Web: \href{http://$web$}{\tt $web$}$endif$ \\
+	$if(classhours)$Class Hours: $classhours$ &$endif$
+	$if(location)$Location: $location$$endif$ \\
+	$if(officehours)$Office Hours: $officehours$  &$endif$
+	$if(office)$Office: $office$$endif$ \\
+$endif$
 
-E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http://$web$}{\tt $web$}$else$TBD$endif$\\
-Office Hours: $if(officehours)$$officehours$$else$TBD$endif$  &  Class Hours: $if(classhours)$$classhours$$else$TBD$endif$\\
-Office: $if(office)$$office$$else$TBD$endif$  & Class Room: $if(classroom)$$classroom$$else$TBD$endif$\\
-	&  \\
 	\hline
 	\end{tabular*}
-	
+
 \vspace{2mm}
-	
+
 
 
 $body$
@@ -196,11 +220,11 @@ $endif$
 $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-
-
-
-
 $endif$
+$if(revise-package)$
+\listofchanges
+$endif$
+
 $for(include-after)$
 $include-after$
 

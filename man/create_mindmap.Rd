@@ -18,5 +18,5 @@ a demo mind map
 Create a demo mind map
 }
 \examples{
-create_mindmap(tempdir())
+# create_mindmap(tempdir())
 }

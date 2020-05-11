@@ -4,8 +4,13 @@
 \alias{create_rosr}
 \title{Create a new project or a new sub-project}
 \usage{
-create_rosr(project = "test", if_render = TRUE, dest_dir = NA, overwrite = FALSE, 
-    sub_project = sub_projects())
+create_rosr(
+  project = "test",
+  if_render = TRUE,
+  dest_dir = NA,
+  overwrite = FALSE,
+  sub_project = sub_projects()
+)
 }
 \arguments{
 \item{project}{Project name.}

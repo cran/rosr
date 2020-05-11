@@ -4,8 +4,12 @@
 \alias{create_rmd}
 \title{Create a demo markdown project}
 \usage{
-create_rmd(to = "manuscript", template = "copernicus_article", if_render = TRUE, 
-    package = "rticles")
+create_rmd(
+  to = "manuscript",
+  template = "copernicus_article",
+  if_render = TRUE,
+  package = "rticles"
+)
 }
 \arguments{
 \item{to}{the desnitation directory}

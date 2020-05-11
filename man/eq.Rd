@@ -4,8 +4,14 @@
 \alias{eq}
 \title{Insert an equation.}
 \usage{
-eq(eqs = NULL, label = NULL, number = NULL, style = c("numbered", "display", "inline", 
-    "none"), skip = 6, if_copy = TRUE)
+eq(
+  eqs = NULL,
+  label = NULL,
+  number = NULL,
+  style = c("numbered", "display", "inline", "none"),
+  skip = 6,
+  if_copy = TRUE
+)
 }
 \arguments{
 \item{eqs}{Character. The path to the equation text file, or a data frame of the equations.}

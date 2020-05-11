@@ -8,11 +8,16 @@
 \alias{syllabus_svm}
 \alias{manuscript_svm}
 \alias{letter_moderncv}
-\alias{beamer_zh}
+\alias{beamer}
 \title{rosr Rmd template}
 \usage{
-rmd_template(..., template_name, keep_tex = TRUE, citation_package = "natbib", 
-    md_extensions = c("-autolink_bare_uris", "-auto_identifiers"))
+rmd_template(
+  ...,
+  template_name,
+  keep_tex = TRUE,
+  citation_package = "natbib",
+  md_extensions = c("-autolink_bare_uris", "-auto_identifiers")
+)
 
 statement_svm(...)
 
@@ -26,7 +31,7 @@ manuscript_svm(...)
 
 letter_moderncv(...)
 
-beamer_zh(...)
+beamer(...)
 }
 \arguments{
 \item{..., }{keep_tex, citation_package, md_extensions
@@ -40,7 +45,7 @@ Arguments passed to \code{rmarkdown::pdf_document()}.}
 or \code{biblatex}. Use \code{none} if neither package is to be used.}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
-default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
+default definition or R Markdown. See the \code{\link[rmarkdown]{rmarkdown_format}} for
 additional details.}
 }
 \value{

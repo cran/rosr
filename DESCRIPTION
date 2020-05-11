@@ -1,6 +1,6 @@
 Package: rosr
-Version: 0.0.8
-Date: 2019-07-12
+Version: 0.0.10
+Date: 2020-05-11
 Title: Create Reproducible Research Projects
 Authors@R: c(
     person("Peng", "Zhao", role = c("aut", "cre"), email = "pzhao@pzhao.net")
@@ -14,11 +14,11 @@ Description: Creates reproducible academic projects with integrated academic ele
 License: GPL-3 | file LICENSE
 URL: https://github.com/pzhaonet/rosr
 BugReports: https://github.com/pzhaonet/rosr/issues
-SystemRequirements: Pandoc (>= 2.2.3)
-RoxygenNote: 6.1.1
+SystemRequirements: pandoc (>= 2.0; https://pandoc.org)
+RoxygenNote: 7.1.0
 NeedsCompilation: no
 LazyData: true
-Packaged: 2019-07-12 08:04:09 UTC; Peng.Zhao
+Packaged: 2020-05-11 02:36:07 UTC; dapen
 Author: Peng Zhao [aut, cre]
 Repository: CRAN
-Date/Publication: 2019-07-12 08:52:50 UTC
+Date/Publication: 2020-05-11 11:10:02 UTC

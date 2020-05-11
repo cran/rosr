@@ -4,8 +4,13 @@
 \alias{create_book}
 \title{Create a demo bookdown project}
 \usage{
-create_book(to = getwd(), template = "demo", if_render = TRUE, package = "bookdownplus", 
-    bdp_output = NULL)
+create_book(
+  to = getwd(),
+  template = "demo",
+  if_render = TRUE,
+  package = "bookdownplus",
+  bdp_output = NULL
+)
 }
 \arguments{
 \item{to}{the desnitation directory.}
